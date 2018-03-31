@@ -12,23 +12,6 @@ testData3 = AmzonParser(testURLs[2])
 testData4 = AmzonParser(testURLs[3])
 testData5 = AmzonParser(testURLs[4])
 
-# print testData1
-# print testData2cd 
-# print testData3
-# print testData4
-# print testData5
-
-# print "ePLATFORM = '%s'" % (testData5['PLATFORM'])
-# print "eITEM_ID = '%s'" % (testData5['ITEM_ID'])
-# print "eCARRIER = '%s'" % (testData5['CARRIER'])
-# print "eTITLE = '%s'" % (testData5['TITLE'])
-# print "eURL = '%s'" % (testData5['URL'])
-# print "ePRICE = '%s'" % (testData5['PRICE'])
-# print "eMEMORY = '%s'" % (testData5['MEMORY'])
-# print "eMODEL = '%s'" % (testData5['MODEL'])
-# print "eSHIPPING = '%s'" % (testData5['SHIPPING'])
-# print "eDATE_POSTED = '%s'" % (testData5['DATE_POSTED'])
-
 def checkTest1(dataset):
     print 'Checking data set 1...'
     correct = 0
