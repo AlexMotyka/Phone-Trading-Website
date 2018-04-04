@@ -40,168 +40,6 @@ data = parse_url('&Brand=Apple&Model=iPhone%2520X')
 # read_json()
 
 
-class TestItemCorrectness1(unittest.TestCase):
-
-    @staticmethod
-    def search_index():
-        """Find the correct index"""
-        for i in data:
-            if data[i]['TITLE'] == 'Apple iPhone 6 32GB Unlocked Gray/Silver Smartphone *z (Canadian Model)':
-                return i
-
-    def test_title(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['TITLE'], 'Apple iPhone 6 32GB Unlocked Gray/Silver Smartphone *z (Canadian Model)')
-
-    def test_url(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['URL'], 'https://www.ebay.ca/itm/Apple-iPhone-6-32GB-Unlocked-Gray-Silver-Smartphone-z-Canadian-Model/263510386154?hash=item3d5a7165ea:m:mTffahPjkJNHY8MtZCjg_ig')
-
-    def test_address(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['ADDRESS'], 'Markham, ON, Canada')
-
-    def test_visits(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['VISITS'], '111+ Sold')
-
-    def test_poster_id(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['POSTER_ID'], 'gadgetag')
-
-    def test_carrier(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['CARRIER'], 'Unlocked')
-
-    def test_item_id(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['ITEM_ID'], '263510386154')
-
-    def test_model(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['MODEL'], 'iPhone 6')
-
-    def test_price(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['PRICE'], 269.99)
-
-    def test_platform(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['PLATFORM'], 'ebay')
-
-    def test_memory(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['MEMORY'], '32')
-
-
-class TestItemCorrectness2(unittest.TestCase):
-
-    @staticmethod
-    def search_index():
-        """Find the correct index"""
-        for i in data:
-            if data[i]['TITLE'] == 'Apple iPhone 6 16GB Canadian Model Unlocked Multiple Color 4G LTE Smartphone *y':
-                return i
-
-    def test_title(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['TITLE'], 'Apple iPhone 6 16GB Canadian Model Unlocked Multiple Color 4G LTE Smartphone *y')
-
-    def test_url(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['URL'], 'https://www.ebay.ca/itm/Apple-iPhone-6-16GB-Canadian-Model-Unlocked-Multiple-Color-4G-LTE-Smartphone-y/263562924747?hash=item3d5d9312cb:m:mkvj9X9Rk6jBWVH6_n_Em8g')
-
-    def test_address(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['ADDRESS'], 'Markham, ON, Canada')
-
-    def test_visits(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['VISITS'], '15+ Watching')
-
-    def test_poster_id(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['POSTER_ID'], 'gadgetag')
-
-    def test_carrier(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['CARRIER'], 'Unlocked')
-
-    def test_item_id(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['ITEM_ID'], '263562924747')
-
-    def test_model(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['MODEL'], 'iPhone 6')
-
-    def test_price(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['PRICE'], 219.99)
-
-    def test_platform(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['PLATFORM'], 'ebay')
-
-    def test_memory(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['MEMORY'], '16')
-
-
-class TestItemCorrectness3(unittest.TestCase):
-
-    @staticmethod
-    def search_index():
-        """Find the correct index"""
-        for i in data:
-            if data[i]['TITLE'] == 'Apple iPhone 7 32gb GSM Unlocked Smartphone':
-                return i
-
-    def test_title(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['TITLE'], 'Apple iPhone 7 32gb GSM Unlocked Smartphone')
-
-    def test_url(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['URL'], 'https://www.ebay.ca/itm/Apple-iPhone-7-32gb-GSM-Unlocked-Smartphone/272714391407?hash=item3f7f0b5f6f:m:mWgYDe4a79NeLuAlV-RmAQA')
-
-    def test_address(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['ADDRESS'], 'Montreal, QC , Canada')
-
-    def test_visits(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['VISITS'], '81+ Sold')
-
-    def test_poster_id(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['POSTER_ID'], 'wireless.canada')
-
-    def test_carrier(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['CARRIER'], 'Unlocked')
-
-    def test_item_id(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['ITEM_ID'], '272714391407')
-
-    def test_model(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['MODEL'], 'iPhone 7')
-
-    def test_price(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['PRICE'], 449.99)
-
-    def test_platform(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['PLATFORM'], 'ebay')
-
-    def test_memory(self):
-        """Test exact match"""
-        self.assertEqual(data[self.search_index()]['MEMORY'], '32')
-
-
 class TestKeyword(unittest.TestCase):
 
     def test_title_keyword(self):
@@ -296,15 +134,240 @@ class TestNotNULL(unittest.TestCase):
             self.assertNotEqual(data[i]['PLATFORM'], "")
 
 
+class TestItemCorrectness1(unittest.TestCase):
+
+    @staticmethod
+    def search_index():
+        """Find the correct index"""
+        for i in data:
+            if data[i]['TITLE'] == 'Apple iPhone 6 32GB Unlocked Gray/Silver Smartphone *z (Canadian Model)':
+                return i
+
+    def test_title(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['TITLE'], 'Apple iPhone 6 32GB Unlocked Gray/Silver Smartphone *z (Canadian Model)')
+
+    def test_url(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['URL'], 'https://www.ebay.ca/itm/Apple-iPhone-6-32GB-Unlocked-Gray-Silver-Smartphone-z-Canadian-Model/263510386154?hash=item3d5a7165ea:m:mTffahPjkJNHY8MtZCjg_ig')
+
+    def test_address(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['ADDRESS'], 'Markham, ON, Canada')
+
+    '''
+    def test_visits(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['VISITS'], '111+ Sold')
+    '''
+
+    def test_poster_id(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['POSTER_ID'], 'gadgetag')
+
+    def test_carrier(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['CARRIER'], 'Unlocked')
+
+    def test_item_id(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['ITEM_ID'], '263510386154')
+
+    def test_model(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['MODEL'], 'iPhone 6')
+
+    def test_price(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['PRICE'], 269.99)
+
+    def test_platform(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['PLATFORM'], 'ebay')
+
+    def test_memory(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['MEMORY'], '32')
+
+
+class TestItemCorrectness2(unittest.TestCase):
+
+    @staticmethod
+    def search_index():
+        """Find the correct index"""
+        for i in data:
+            if data[i]['TITLE'] == 'Apple iPhone 6 16GB Canadian Model Unlocked Multiple Color 4G LTE Smartphone *y':
+                return i
+
+    def test_title(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['TITLE'], 'Apple iPhone 6 16GB Canadian Model Unlocked Multiple Color 4G LTE Smartphone *y')
+
+    def test_url(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['URL'], 'https://www.ebay.ca/itm/Apple-iPhone-6-16GB-Canadian-Model-Unlocked-Multiple-Color-4G-LTE-Smartphone-y/263562924747?hash=item3d5d9312cb:m:mkvj9X9Rk6jBWVH6_n_Em8g')
+
+    def test_address(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['ADDRESS'], 'Markham, ON, Canada')
+
+    '''
+    def test_visits(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['VISITS'], '15+ Watching')
+    '''
+
+    def test_poster_id(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['POSTER_ID'], 'gadgetag')
+
+    def test_carrier(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['CARRIER'], 'Unlocked')
+
+    def test_item_id(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['ITEM_ID'], '263562924747')
+
+    def test_model(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['MODEL'], 'iPhone 6')
+
+    def test_price(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['PRICE'], 219.99)
+
+    def test_platform(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['PLATFORM'], 'ebay')
+
+    def test_memory(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['MEMORY'], '16')
+
+
+class TestItemCorrectness3(unittest.TestCase):
+
+    @staticmethod
+    def search_index():
+        """Find the correct index"""
+        for i in data:
+            if data[i]['TITLE'] == 'Apple iPhone 7 32gb GSM Unlocked Smartphone':
+                return i
+
+    def test_title(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['TITLE'], 'Apple iPhone 7 32gb GSM Unlocked Smartphone')
+
+    def test_url(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['URL'], 'https://www.ebay.ca/itm/Apple-iPhone-7-32gb-GSM-Unlocked-Smartphone/272714391407?hash=item3f7f0b5f6f:m:mWgYDe4a79NeLuAlV-RmAQA')
+
+    def test_address(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['ADDRESS'], 'Montreal, QC , Canada')
+
+    '''
+    def test_visits(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['VISITS'], '81+ Sold')
+    '''
+
+    def test_poster_id(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['POSTER_ID'], 'wireless.canada')
+
+    def test_carrier(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['CARRIER'], 'Unlocked')
+
+    def test_item_id(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['ITEM_ID'], '272714391407')
+
+    def test_model(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['MODEL'], 'iPhone 7')
+
+    def test_price(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['PRICE'], 449.99)
+
+    def test_platform(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['PLATFORM'], 'ebay')
+
+    def test_memory(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['MEMORY'], '32')
+
+
+class TestItemCorrectness4(unittest.TestCase):
+
+    @staticmethod
+    def search_index():
+        """Find the correct index"""
+        for i in data:
+            if data[i]['TITLE'] == 'Apple iPhone 6 64GB Canadian Model Gray 4G unlocked LTE Smartphone *z':
+                return i
+
+    def test_title(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['TITLE'], 'Apple iPhone 6 64GB Canadian Model Gray 4G unlocked LTE Smartphone *z')
+
+    def test_url(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['URL'], 'https://www.ebay.ca/itm/Apple-iPhone-6-64GB-Canadian-Model-Gray-4G-unlocked-LTE-Smartphone-z/263494504885?hash=item3d597f11b5:m:mkvj9X9Rk6jBWVH6_n_Em8g')
+
+    def test_address(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['ADDRESS'], 'Markham, ON, Canada')
+
+    '''
+    def test_visits(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['VISITS'], '15+ Sold')
+    '''
+
+    def test_poster_id(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['POSTER_ID'], 'gadgetag')
+
+    def test_carrier(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['CARRIER'], 'Unlocked')
+
+    def test_item_id(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['ITEM_ID'], '263494504885')
+
+    def test_model(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['MODEL'], 'iPhone 6')
+
+    def test_price(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['PRICE'], 289.99)
+
+    def test_platform(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['PLATFORM'], 'ebay')
+
+    def test_memory(self):
+        """Test exact match"""
+        self.assertEqual(data[self.search_index()]['MEMORY'], '64')
+
+
 if __name__ == '__main__':
     suite = unittest.TestSuite()
-    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestItemCorrectness1))
-    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestItemCorrectness2))
-    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestItemCorrectness3))
     suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestKeyword))
     suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestKeywordFilter))
     suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestPrice))
     suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestNotNULL))
+    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestItemCorrectness1))
+    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestItemCorrectness2))
+    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestItemCorrectness3))
+    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestItemCorrectness4))
     with open('eBay_Test_Report.html', 'w') as f:
         runner = HTMLTestRunner(stream=f, title='eBay Test Report', description='Powered by HTMLTestRunner', verbosity=2)
         runner.run(suite)
