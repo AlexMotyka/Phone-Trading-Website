@@ -21,7 +21,7 @@ def checkTest1(dataset):
     eCARRIER = 'Unlocked'
     eTITLE = 'Apple iPhone 7 Factory Unlocked Phone - 4.7Inch Screen - 32GB - Black (Certified Refurbished)'
     eURL = 'https://www.amazon.ca/Apple-iPhone-Factory-Unlocked-Phone/dp/B01N6YAP98/ref=sr_1_4?s=wireless&ie=UTF8&qid=1522509266&sr=1-4&keywords=iphone+7'
-    ePRICE = '559.95'
+    ePRICE = '554.95'
     eMEMORY = '32GB'
     eMODEL = 'B01N6YAP98'
     eSHIPPING = None
@@ -254,7 +254,7 @@ def checkTest5(dataset):
     eCARRIER = 'Unlocked'
     eTITLE = 'Samsung Galaxy S8, G950FD 64GB Smartphone, Midnight Black, Factory Unlocked (International Version)'
     eURL = 'https://www.amazon.ca/Samsung-Galaxy-Unlocked-Phone-SM-G950U/dp/B071NCHF1S/ref=sr_1_3?ie=UTF8&qid=1522527828&sr=8-3&keywords=samsung+8'
-    ePRICE = '799.99'
+    ePRICE = '757.99'
     eMEMORY = '64GB'
     eMODEL = 'SM-SAMG950FDBLKEU'
     eSHIPPING = None
