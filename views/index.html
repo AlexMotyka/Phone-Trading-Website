@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+<div class="container">
+<div class="table-striped">
+  <h1>Most active phone today:</h1>
+<h2>
+  {{ mostsold }}
+</h2>
+<table class="table-striped">
+  {% for table in tables %}
+  <h2>{{titles[loop.index]}}</h2>
+    <tr>{{ table|safe }}</tr>
+  {% endfor %}
+</table>
+</div>
+</div>
+
+
+{% endblock %}

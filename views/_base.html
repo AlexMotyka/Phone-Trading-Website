@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hermes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="css/modern-business.css">
+    <link rel="icon" type="image/png" href="{{ url_for("static", filename="img/icon.jpeg") }}">
+
+
+
+</head>
+
+
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container">
+<div class="nav-wrapper">
+	<ul>
+	<li><a style="color:black;" href="/">Home</a></li>
+	<li><a style="color:black;"  href="/active">Active</a></li>
+	<li><a style="color:black;"  href="/bestBuys">Best</a></li>
+	<li><a style="color:black;"  href="/browse">Browse</a></li>
+	<li><a style="color:black;"  href="/users">Users</a></li>
+	<li><a style="color:black;"  href="/detailedUser">Indepth Users</a></li>
+	<li><a style="color:black;"  href="/itemSearch">Item Search</a></li>
+	<li><a style="color:black;"  href="/TransactionSearch">Trans Search</a></li>		
+	<li><a style="color:black;"  href="/PurchaseSubmission">Buy submission</a></li>
+	<li><a style="color:black;"  href="/saleSubmission">Sell Submisson</a></li>
+	<li><a style="color:black;"  href="/phoneavg">Averages</a></li>
+	<li><a style="color:black;"  href="/modelsPurchased">Purchased</a></li>
+	<li><a style="color:black;"  href="/unboughtModels">Unpurchased</a></li>
+	<li><a style="color:black;"  href="/heatmap">Heatmap</a></li>
+	</ul>   
+   </div>
+ </div>
+</nav>
+
+<br>
+<br>
+{% block content %}
+
+
+{% endblock %}
+</body>
+</html>

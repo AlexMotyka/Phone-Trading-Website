@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="container">
+<div class=page>
+  <h1>Active Users</h1>
+  <p>This table shows all the users who made at least one purchase</p>
+  {% for table in tables %}
+    {{ table|safe }}
+  {% endfor %}
+</div>
+</div>
+
+
+{% endblock %}
