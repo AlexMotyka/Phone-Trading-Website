@@ -46,7 +46,7 @@ python main.py
 
 ## Flask Server Setup
 
-Run the web.py file, this will initilize the web server.
+Run the web0.py file, this will initilize the web server.
 Navigate to http://localhost:5000
 
 ## API Documentation
